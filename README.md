@@ -131,15 +131,6 @@ Expected CSV columns:
 ]
 ```
 
-## Features (v0.1)
-
-- Player Insight Extractor
-- Team Snapshot
-- Training Projection
-- Junior Squad Helper
-- Match Analyzer Lite
-- CLI Interface
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
