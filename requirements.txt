@@ -1,0 +1,6 @@
+# Scouty Requirements
+# Python >= 3.8
+
+# Core dependencies
+# (Add specific packages as needed)
+

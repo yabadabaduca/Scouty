@@ -1,0 +1,48 @@
+[
+  {
+    "date": "2024-01-15",
+    "opponent": "FC Champions",
+    "result": "3-1",
+    "possession": 52.5,
+    "chances": 5,
+    "tactics": "Normal",
+    "formation": "4-4-2"
+  },
+  {
+    "date": "2024-01-22",
+    "opponent": "United Stars",
+    "result": "2-2",
+    "possession": 48.0,
+    "chances": 4,
+    "tactics": "Counter-Attack",
+    "formation": "4-4-2"
+  },
+  {
+    "date": "2024-01-29",
+    "opponent": "City Rovers",
+    "result": "1-0",
+    "possession": 55.2,
+    "chances": 6,
+    "tactics": "Normal",
+    "formation": "3-5-2"
+  },
+  {
+    "date": "2024-02-05",
+    "opponent": "Athletic FC",
+    "result": "0-2",
+    "possession": 45.8,
+    "chances": 3,
+    "tactics": "Normal",
+    "formation": "4-4-2"
+  },
+  {
+    "date": "2024-02-12",
+    "opponent": "Rangers United",
+    "result": "4-2",
+    "possession": 58.3,
+    "chances": 7,
+    "tactics": "Pressing",
+    "formation": "4-3-3"
+  }
+]
+
