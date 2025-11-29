@@ -5,14 +5,30 @@ Scouty CLI - Command-line interface
 import argparse
 import json
 import sys
+import os
 from pathlib import Path
 
-from scouty.core.parser import parse_players_csv
+from scouty.core.parser import parse_players_csv, MAX_JSON_SIZE
 from scouty.modules.player_insights import PlayerInsights
 from scouty.modules.team_snapshot import TeamSnapshot
 from scouty.modules.training_projection import TrainingProjection
 from scouty.modules.junior_squad import JuniorSquadAnalyzer
 from scouty.modules.match_analyzer import MatchAnalyzer
+
+
+def _validate_output_path(output_path: str) -> Path:
+    """Validate output file path"""
+    path = Path(output_path).resolve()
+    
+    # Check if parent directory exists
+    if not path.parent.exists():
+        raise ValueError(f"Output directory does not exist: {path.parent}")
+    
+    # Check if parent is writable
+    if not os.access(path.parent, os.W_OK):
+        raise PermissionError(f"Output directory is not writable: {path.parent}")
+    
+    return path
 
 
 def analyze_players(args):
@@ -23,13 +39,20 @@ def analyze_players(args):
         results = insights.analyze_all()
         
         if args.output:
-            with open(args.output, 'w', encoding='utf-8') as f:
+            output_path = _validate_output_path(args.output)
+            with open(output_path, 'w', encoding='utf-8') as f:
                 json.dump(results, f, indent=2, ensure_ascii=False)
-            print(f"Results saved to {args.output}")
+            print(f"Results saved to {output_path}")
         else:
             print(json.dumps(results, indent=2, ensure_ascii=False))
-    except Exception as e:
+    except (FileNotFoundError, ValueError, PermissionError) as e:
         print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
+    except KeyboardInterrupt:
+        print("\nOperation cancelled by user", file=sys.stderr)
+        sys.exit(130)
+    except Exception as e:
+        print(f"Unexpected error: {e}", file=sys.stderr)
         sys.exit(1)
 
 
@@ -41,13 +64,20 @@ def team_snapshot(args):
         results = snapshot.generate_snapshot()
         
         if args.output:
-            with open(args.output, 'w', encoding='utf-8') as f:
+            output_path = _validate_output_path(args.output)
+            with open(output_path, 'w', encoding='utf-8') as f:
                 json.dump(results, f, indent=2, ensure_ascii=False)
-            print(f"Snapshot saved to {args.output}")
+            print(f"Snapshot saved to {output_path}")
         else:
             print(json.dumps(results, indent=2, ensure_ascii=False))
-    except Exception as e:
+    except (FileNotFoundError, ValueError, PermissionError) as e:
         print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
+    except KeyboardInterrupt:
+        print("\nOperation cancelled by user", file=sys.stderr)
+        sys.exit(130)
+    except Exception as e:
+        print(f"Unexpected error: {e}", file=sys.stderr)
         sys.exit(1)
 
 
@@ -62,16 +92,26 @@ def training_projection(args):
         elif args.near_skillup:
             results = projection.find_players_near_skillup()
         else:
-            results = projection.project_skill_ups(args.weeks or 4)
+            weeks = args.weeks or 4
+            if weeks < 1 or weeks > 52:
+                raise ValueError(f"Invalid weeks: {weeks} (must be between 1 and 52)")
+            results = projection.project_skill_ups(weeks)
         
         if args.output:
-            with open(args.output, 'w', encoding='utf-8') as f:
+            output_path = _validate_output_path(args.output)
+            with open(output_path, 'w', encoding='utf-8') as f:
                 json.dump(results, f, indent=2, ensure_ascii=False)
-            print(f"Projection saved to {args.output}")
+            print(f"Projection saved to {output_path}")
         else:
             print(json.dumps(results, indent=2, ensure_ascii=False))
-    except Exception as e:
+    except (FileNotFoundError, ValueError, PermissionError) as e:
         print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
+    except KeyboardInterrupt:
+        print("\nOperation cancelled by user", file=sys.stderr)
+        sys.exit(130)
+    except Exception as e:
+        print(f"Unexpected error: {e}", file=sys.stderr)
         sys.exit(1)
 
 
@@ -82,29 +122,51 @@ def junior_squad(args):
         analyzer = JuniorSquadAnalyzer(juniors)
         
         if args.promotions:
-            results = analyzer.recommend_promotions(args.max or 3)
+            max_promotions = args.max or 3
+            if max_promotions < 1 or max_promotions > 20:
+                raise ValueError(f"Invalid max promotions: {max_promotions} (must be between 1 and 20)")
+            results = analyzer.recommend_promotions(max_promotions)
         elif args.simulate:
-            results = analyzer.simulate_training_impact(args.training or "playmaking", args.weeks or 4)
+            weeks = args.weeks or 4
+            if weeks < 1 or weeks > 52:
+                raise ValueError(f"Invalid weeks: {weeks} (must be between 1 and 52)")
+            results = analyzer.simulate_training_impact(args.training or "playmaking", weeks)
         elif args.formations:
             results = analyzer.compare_formations()
         else:
             results = analyzer.analyze_potential()
         
         if args.output:
-            with open(args.output, 'w', encoding='utf-8') as f:
+            output_path = _validate_output_path(args.output)
+            with open(output_path, 'w', encoding='utf-8') as f:
                 json.dump(results, f, indent=2, ensure_ascii=False)
-            print(f"Analysis saved to {args.output}")
+            print(f"Analysis saved to {output_path}")
         else:
             print(json.dumps(results, indent=2, ensure_ascii=False))
-    except Exception as e:
+    except (FileNotFoundError, ValueError, PermissionError) as e:
         print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
+    except KeyboardInterrupt:
+        print("\nOperation cancelled by user", file=sys.stderr)
+        sys.exit(130)
+    except Exception as e:
+        print(f"Unexpected error: {e}", file=sys.stderr)
         sys.exit(1)
 
 
 def match_analyzer(args):
     """Analyze match patterns"""
     try:
-        with open(args.file, 'r', encoding='utf-8') as f:
+        # Validate input file
+        from scouty.core.parser import _validate_file_path
+        validated_path = _validate_file_path(args.file)
+        
+        with open(validated_path, 'r', encoding='utf-8') as f:
+            # Check file size before loading
+            file_size = validated_path.stat().st_size
+            if file_size > MAX_JSON_SIZE:
+                raise ValueError(f"JSON file too large: {file_size} bytes (max: {MAX_JSON_SIZE})")
+            
             matches = json.load(f)
         
         analyzer = MatchAnalyzer(matches)
