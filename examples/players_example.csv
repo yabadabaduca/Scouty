@@ -1,7 +1,24 @@
 id,name,age,position,skills,salary,tsi,form,stamina,experience,leadership
-1,João Silva,22,IM,"{""playmaking"": 14, ""defending"": 8, ""scoring"": 6}",15000,45000,6,90,5,1
-2,Pedro Santos,19,CD,"{""defending"": 15, ""playmaking"": 7, ""winger"": 5}",12000,38000,7,85,3,0
-3,Carlos Oliveira,25,FW,"{""scoring"": 16, ""playmaking"": 9, ""winger"": 8}",18000,52000,5,88,8,2
-4,Ana Costa,21,WI,"{""winger"": 14, ""playmaking"": 10, ""defending"": 6}",14000,42000,6,87,4,1
-5,Marcos Lima,28,GK,"{""goalkeeping"": 17, ""defending"": 5, ""playmaking"": 3}",20000,60000,5,92,10,3
-
+498301416,David Ibatiba,17,GK,"{""goalkeeping"": 6, ""defending"": 4, ""playmaking"": 2, ""winger"": 2, ""scoring"": 2, ""set_pieces"": 3}",1980,2040,5,6,2,5
+497709072,Pablo Halcón,18,CD,"{""goalkeeping"": 1, ""defending"": 7, ""playmaking"": 3, ""winger"": 7, ""scoring"": 3, ""set_pieces"": 1}",1032,1910,6,5,2,5
+497987978,Edson Vieira Dias,26,CD,"{""goalkeeping"": 1, ""defending"": 7, ""playmaking"": 3, ""winger"": 6, ""scoring"": 3, ""set_pieces"": 5}",800,1210,5,7,4,2
+497987976,Raphael Bruno Ibijaú,19,CD,"{""goalkeeping"": 1, ""defending"": 7, ""playmaking"": 4, ""winger"": 4, ""scoring"": 5, ""set_pieces"": 5}",780,1250,6,7,2,4
+497987977,Jovino Flechtmann,30,CD,"{""goalkeeping"": 1, ""defending"": 6, ""playmaking"": 4, ""winger"": 4, ""scoring"": 2, ""set_pieces"": 7}",580,250,6,6,5,3
+493539984,Juan Jesús Borraz,18,CD,"{""goalkeeping"": 1, ""defending"": 8, ""playmaking"": 4, ""winger"": 3, ""scoring"": 2, ""set_pieces"": 1}",1176,2100,6,6,2,3
+497987975,Renan Henrique Barroso,29,CD,"{""goalkeeping"": 1, ""defending"": 6, ""playmaking"": 6, ""winger"": 3, ""scoring"": 1, ""set_pieces"": 2}",660,500,6,5,4,1
+498364955,Helinho Quirino,17,CD,"{""goalkeeping"": 1, ""defending"": 6, ""playmaking"": 3, ""winger"": 2, ""scoring"": 4, ""set_pieces"": 2}",580,350,7,6,2,1
+498471941,Eliéser Silveira,28,WB,"{""goalkeeping"": 2, ""defending"": 5, ""playmaking"": 2, ""winger"": 10, ""scoring"": 3, ""set_pieces"": 1}",2520,3710,7,7,5,3
+498597379,Joziel Oliveira,27,WB,"{""goalkeeping"": 2, ""defending"": 3, ""playmaking"": 3, ""winger"": 9, ""scoring"": 5, ""set_pieces"": 2}",1520,1860,6,5,4,4
+497987987,Fernando Yozzi,23,WB,"{""goalkeeping"": 1, ""defending"": 4, ""playmaking"": 6, ""winger"": 7, ""scoring"": 6, ""set_pieces"": 4}",740,2180,6,6,3,3
+497987979,Bruno Caíque Bicalho,32,IM,"{""goalkeeping"": 2, ""defending"": 6, ""playmaking"": 6, ""winger"": 6, ""scoring"": 5, ""set_pieces"": 2}",620,490,4,6,5,4
+497987985,Pedro Bérgamo,20,IM,"{""goalkeeping"": 1, ""defending"": 4, ""playmaking"": 6, ""winger"": 6, ""scoring"": 5, ""set_pieces"": 3}",660,1130,6,6,2,4
+497987986,Walter Attiê,28,WB,"{""goalkeeping"": 1, ""defending"": 6, ""playmaking"": 6, ""winger"": 6, ""scoring"": 3, ""set_pieces"": 4}",680,1550,7,6,4,3
+497987980,Leomar Moura,21,IM,"{""goalkeeping"": 1, ""defending"": 5, ""playmaking"": 6, ""winger"": 5, ""scoring"": 5, ""set_pieces"": 2}",620,1110,6,7,3,2
+498534609,Matheus Silva Assis,27,IM,"{""goalkeeping"": 2, ""defending"": 3, ""playmaking"": 9, ""winger"": 5, ""scoring"": 3, ""set_pieces"": 3}",2520,3560,6,7,4,2
+494173009,Arnaldo Freitas,18,IM,"{""goalkeeping"": 2, ""defending"": 4, ""playmaking"": 8, ""winger"": 4, ""scoring"": 5, ""set_pieces"": 1}",888,2700,7,7,2,3
+497987982,João Roberto Capixaba,23,IM,"{""goalkeeping"": 1, ""defending"": 6, ""playmaking"": 7, ""winger"": 2, ""scoring"": 4, ""set_pieces"": 2}",860,1240,5,6,4,2
+497987981,Álvaro Luiz Rondonense,19,IM,"{""goalkeeping"": 1, ""defending"": 5, ""playmaking"": 6, ""winger"": 2, ""scoring"": 6, ""set_pieces"": 3}",680,1320,6,7,2,5
+497987988,Matheus Lacerda Leal,18,FW,"{""goalkeeping"": 1, ""defending"": 3, ""playmaking"": 4, ""winger"": 6, ""scoring"": 5, ""set_pieces"": 8}",860,2190,4,7,2,2
+497758105,Manel Corcho,18,FW,"{""goalkeeping"": 1, ""defending"": 4, ""playmaking"": 5, ""winger"": 3, ""scoring"": 8, ""set_pieces"": 5}",1224,1630,6,4,2,4
+497987990,Raimundo Peixoto,25,FW,"{""goalkeeping"": 1, ""defending"": 2, ""playmaking"": 5, ""winger"": 3, ""scoring"": 6, ""set_pieces"": 6}",620,1180,6,6,3,6
+498635263,Davi de Aguiar,17,FW,"{""goalkeeping"": 2, ""defending"": 3, ""playmaking"": 4, ""winger"": 3, ""scoring"": 6, ""set_pieces"": 3}",680,460,6,7,2,4

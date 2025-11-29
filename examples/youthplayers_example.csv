@@ -1,0 +1,20 @@
+id,name,age,position,skills,salary,tsi,form,stamina,experience,leadership,days_until_promotion,promotion_age
+403508547,Fernandinho Brusque,16,WB,"{""goalkeeping"": 0, ""defending"": 0, ""playmaking"": 0, ""winger"": 0, ""scoring"": 4, ""set_pieces"": 0}",0,0,0,0,0,80,17
+403508552,Gian Gabriel Pantaleão,16,WB,"{""goalkeeping"": 0, ""defending"": 2, ""playmaking"": 0, ""winger"": 0, ""scoring"": 0, ""set_pieces"": 0}",0,0,0,0,0,80,17
+403508554,Jimmy Bento,16,GK,"{""goalkeeping"": 0, ""defending"": 0, ""playmaking"": 0, ""winger"": 0, ""scoring"": 0, ""set_pieces"": 0}",0,0,0,0,0,80,17
+403508542,Nelson Silva,17,GK,"{""goalkeeping"": 1, ""defending"": 0, ""playmaking"": 0, ""winger"": 0, ""scoring"": 5, ""set_pieces"": 0}",0,0,0,0,0,80,17
+403508553,Tadeu Lima Vieira,16,CD,"{""goalkeeping"": 1, ""defending"": 0, ""playmaking"": 0, ""winger"": 0, ""scoring"": 0, ""set_pieces"": 0}",0,0,0,0,0,80,17
+403508549,Wellinton Nogueira Abreu,17,CD,"{""goalkeeping"": 0, ""defending"": 0, ""playmaking"": 0, ""winger"": 0, ""scoring"": 0, ""set_pieces"": 0}",0,0,0,0,0,80,17
+403355836,Pierpaolo Moreno,16,IM,"{""goalkeeping"": 0, ""defending"": 5, ""playmaking"": 5, ""winger"": 0, ""scoring"": 0, ""set_pieces"": 0}",0,0,0,0,0,82,17
+397165366,Nilmar de Barros Neto,16,WB,"{""goalkeeping"": 0, ""defending"": 0, ""playmaking"": 0, ""winger"": 0, ""scoring"": 3, ""set_pieces"": 4}",0,0,0,0,0,89,17
+403508544,Jacintho Suruagy,16,CD,"{""goalkeeping"": 0, ""defending"": 2, ""playmaking"": 0, ""winger"": 0, ""scoring"": 0, ""set_pieces"": 0}",0,0,0,0,0,92,17
+403508550,Dilmárcio Santos,16,WB,"{""goalkeeping"": 0, ""defending"": 0, ""playmaking"": 2, ""winger"": 3, ""scoring"": 0, ""set_pieces"": 0}",0,0,0,0,0,94,17
+401473389,Norberto Moraes,16,IM,"{""goalkeeping"": 0, ""defending"": 0, ""playmaking"": 3, ""winger"": 0, ""scoring"": 0, ""set_pieces"": 4}",0,0,0,0,0,96,17
+402171571,Marlon Brandon Vargas Xavier,16,IM,"{""goalkeeping"": 0, ""defending"": 3, ""playmaking"": 0, ""winger"": 0, ""scoring"": 0, ""set_pieces"": 0}",0,0,0,0,0,110,17
+396919760,Osíris Rabelo,15,WB,"{""goalkeeping"": 0, ""defending"": 0, ""playmaking"": 0, ""winger"": 5, ""scoring"": 0, ""set_pieces"": 4}",0,0,0,0,0,122,17
+403508545,Ezequiel da Serra,15,IM,"{""goalkeeping"": 0, ""defending"": 0, ""playmaking"": 4, ""winger"": 0, ""scoring"": 0, ""set_pieces"": 0}",0,0,0,0,0,125,17
+403508546,Michel Augusto Marin,15,WB,"{""goalkeeping"": 0, ""defending"": 1, ""playmaking"": 0, ""winger"": 4, ""scoring"": 0, ""set_pieces"": 2}",0,0,0,0,0,151,17
+403508543,Yuri Pavinato,15,FW,"{""goalkeeping"": 0, ""defending"": 0, ""playmaking"": 0, ""winger"": 4, ""scoring"": 0, ""set_pieces"": 0}",0,0,0,0,0,180,17
+403508548,Arão Nicolau,15,WB,"{""goalkeeping"": 0, ""defending"": 0, ""playmaking"": 3, ""winger"": 0, ""scoring"": 5, ""set_pieces"": 4}",0,0,0,0,0,185,17
+403508551,Nestor Maciel,15,FW,"{""goalkeeping"": 0, ""defending"": 0, ""playmaking"": 0, ""winger"": 0, ""scoring"": 3, ""set_pieces"": 3}",0,0,0,0,0,191,17
+
